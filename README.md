@@ -101,7 +101,7 @@ This will:
 
 Requires Docker and Go.
 
-## Protocol Invariants
+## Key Features
 
 1. Only the **initiator** creates the invoice and holds the preimage — no other node can trigger settlement.
 2. Intermediate nodes use `RESUME_MODIFIED` to waive fees and forward immediately - no HODL invoices required.
