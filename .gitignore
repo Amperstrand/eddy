@@ -1,0 +1,11 @@
+.DS_Store
+*.yaml
+*.log
+
+.idea
+/bin
+/logs
+/.claude
+/__pycache__
+/eddy-demo/eddy-demo
+/eddy-demo/eddyd-data-*

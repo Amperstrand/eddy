@@ -1,0 +1,20 @@
+# Logging
+log_level: info             # debug, info, warn, error
+
+# Data directory for persistent state (preimage recovery)
+data_dir: ~/.eddy
+
+# Solver settings
+solver:
+  max_cycle_length: 5    # max number of hops in a cycle (3-6)
+  stale_threshold: 60    # ignore channel states older than this (seconds)
+  min_push_amount: 100000 # minimum sats to push in a circulation
+
+# Circulation settings
+circulation:
+  timeout: 30s           # abort circulation if not complete within this
+  payment_timeout: 60s   # timeout for individual payment attempts
+
+# Gossip settings
+gossip:
+  interval: 30s          # how often to re-broadcast channel state to peers
