@@ -5,7 +5,7 @@ Free circular rebalancing with no central coordinator.
 
 ## Overview
 
-In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Networks"](https://arxiv.org/pdf/2601.04835), he proved that, even in perfectly circular economy, asymmetric channel fees will make the network more expensive and less reliable over time. One of the mitigation strategies he listed is coordinated replenishment. 
+In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Networks"](https://arxiv.org/pdf/2601.04835), he proved that, even in a perfectly circular economy, asymmetric channel fees will make the network more expensive and less reliable over time. One of the mitigation strategies he listed is coordinated replenishment. 
 
 The optimal version of this requires a central coordinator with full knowledge of every node's balances. In practice, any circulation decomposes into simple cycles, and each cycle can be executed independently. That's what eddy does.
 
