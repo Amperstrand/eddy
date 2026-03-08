@@ -9,7 +9,7 @@ In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Net
 
 The optimal version of this requires a central coordinator with full knowledge of every node's balances. In practice, any circulation decomposes into simple cycles, and each cycle can be executed independently. That's what eddy does.
 
-eddy is a peer-to-peer daemon that runs alongside LND. Nodes gossip their imbalances and greedily execute one cycle at a time. Repeated cycles converge toward balanced channels. No central server, no trust, no fees.
+eddy is a peer-to-peer daemon that runs alongside LND. Nodes gossip their imbalances execute one cycle at a time. Repeated cycles converge toward balanced channels. No central server, no trust, no fees.
 
 ## How It Works
 
