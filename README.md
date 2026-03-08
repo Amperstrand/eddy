@@ -97,13 +97,14 @@ cd eddy-demo
 This will:
 1. Extract and start a 4-node Polar network (Alice, Bob, Carol, Dave)
 2. Build `eddyd` and launch an instance on each node
-3. Open a TUI showing channel balances, topology, and circulations as they happen.
+3. Simulate payments that imbalance channels. 
+4. Open a TUI showing channel balances, topology, and circulations as they happen.
 
 Requires Docker and Go.
 
 ## Key Features
 
-1. Only the **initiator** creates the invoice and holds the preimage — no other node can trigger settlement.
+1. Only the **initiator** creates the invoice and holds the preimage - no other node can trigger settlement.
 2. Intermediate nodes use `RESUME_MODIFIED` to waive fees and forward immediately - no HODL invoices required.
 3. If any node rejects a proposal (busy, insufficient delta, unknown channel), the proposal aborts and no payment is attempted.
 4. Rebalances are free. If any node does not waive fees, the payment will fail with `FEE_INSUFFICIENT`.
