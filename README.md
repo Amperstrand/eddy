@@ -87,7 +87,7 @@ Optionally point to a config file with `--config path/to/config.yaml`.
 
 ## Demo
 
-The `eddy-demo/` directory contains a self-contained demo using [Polar](https://lightningpolar.com/) (Docker-based regtest Lightning network) and a TUI that visualizes the rebalancing in real time.
+The `eddy-demo/` directory includes a self-contained demo using [Polar](https://lightningpolar.com/) (Docker-based regtest Lightning network) and a TUI that visualizes the rebalancing in real time.
 
 ```bash
 cd eddy-demo
