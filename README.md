@@ -5,7 +5,7 @@ Free circular rebalancing with no central coordinator.
 
 ## Overview
 
-In René Pickhardt's Magnum Opus, ["A Mathematical Theory of Payment Channel Networks"](https://arxiv.org/pdf/2601.04835), he proved that, even in perfectly circular economy, asymmetric channel fees will make the network more expensive and less reliable over time. One of the mitigation strategies he listed is coordinated replenishment. 
+In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Networks"](https://arxiv.org/pdf/2601.04835), he proved that, even in perfectly circular economy, asymmetric channel fees will make the network more expensive and less reliable over time. One of the mitigation strategies he listed is coordinated replenishment. 
 
 The optimal version of this requires a central coordinator with full knowledge of every node's balances. In practice, any circulation decomposes into simple cycles, and each cycle can be executed independently. That's what eddy does.
 
@@ -110,7 +110,8 @@ Requires Docker and Go.
 
 ## Roadmap
 
-- A mechanism to indicate "desired" channel balance rather than 50/50. Increases privacy. 
+- A mechanism to indicate "desired" channel balance rather than defaulting to 50/50. 
+- Increase channel balance privacy.  
 - Metrics and notifications(?).
 - An interceptor registry for which this project, and others like it, would be a plugin. 
 - A human audit. This project was 99% vibecoded.
