@@ -97,9 +97,7 @@ cd eddy-demo
 This will:
 1. Extract and start a 4-node Polar network (Alice, Bob, Carol, Dave)
 2. Build `eddyd` and launch an instance on each node
-3. Open a TUI showing channel balances, topology, and circulations as they happen. 
-
-Note: delete the
+3. Open a TUI showing channel balances, topology, and circulations as they happen.
 
 Requires Docker and Go.
 
