@@ -9,7 +9,7 @@ In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Net
 
 The optimal version of this requires a central coordinator with full knowledge of every node's balances. In practice, any circulation decomposes into simple cycles, and each cycle can be executed independently. That's what eddy does.
 
-eddy is a peer-to-peer daemon that runs alongside LND. Nodes gossip their imbalances execute one cycle at a time. Repeated cycles converge toward balanced channels. No central server, no trust, no fees.
+eddy is a peer-to-peer daemon that runs alongside LND. Nodes gossip their imbalances and execute one cycle at a time. Repeated cycles converge toward balanced channels. No central server, no trust, no fees.
 
 ## How It Works
 
@@ -79,8 +79,8 @@ go build -o eddyd ./cmd/eddyd/
 
 ./eddyd \
   --lnd-host localhost:10001 \
-  --lnd-cert ~/.lnd/tls.cert \
-  --lnd-macaroon ~/.lnd/data/chain/bitcoin/mainnet/admin.macaroon
+  --lnd-cert /path/to/tls.cert \
+  --lnd-macaroon /path/to/admin.macaroon
 ```
 
 Optionally point to a config file with `--config path/to/config.yaml`.
