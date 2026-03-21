@@ -120,3 +120,9 @@ Requires Docker and Go.
 ## Disclaimer
 
 This software is provided as-is with no guarantees. Use at your own risk.
+
+## Donations
+
+If you believe this project has value, please consider donating to this address:
+
+bc1q45nt34zrkkw8fve0rdkk9h80e7kw6gjt50paer
