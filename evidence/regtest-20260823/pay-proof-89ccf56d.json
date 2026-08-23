@@ -1,0 +1,13 @@
+{
+ "destination": "03b04d0681676c2461ff91ef625aa33f74b8de1659b669e8944be7fc762adb5b17",
+ "payment_hash": "1427dfa0827df9387b705f373ce013d7a0e26ea804a542d81f35187afba36333",
+ "status": "complete",
+ "created_at": 1787511583,
+ "completed_at": 1787511593,
+ "label": "eddy-89ccf56dcc69e57d",
+ "preimage": "acd0abc412f250100f334df518cff4d1797c2e4f3ca6f27366f5d47eb6652924",
+ "amount_msat": 50000000,
+ "amount_sent_msat": 50000000,
+ "created_index": 13,
+ "updated_index": 13
+}
