@@ -9,7 +9,21 @@ In René Pickhardt's magnum opus, ["A Mathematical Theory of Payment Channel Net
 
 The optimal version of this requires a central coordinator with full knowledge of every node's balances. In practice, any circulation decomposes into simple cycles, and each cycle can be executed independently. That's what eddy does.
 
-eddy is a peer-to-peer daemon that runs alongside LND. Nodes gossip their imbalances and execute one cycle at a time. Repeated cycles converge toward balanced channels. No central server, no trust, no fees.
+## Fork: eddy-cln — the Core Lightning port (branch `eddy-cln`)
+
+This fork carries **eddy-cln**, a native CLN plugin that ports the
+propose/execute protocol and replaces the HTLC-interceptor fee waiver
+with serialized `setchannel` transitions — making the waiver race-free
+by construction. Where our 20-run instrumentation campaign showed the
+LND interceptor race charges every hop deterministically (~1 ms window;
+issues #1–#5), the CLN port settles full circulations at **zero routing
+fees**, proven first on regtest and then on **live signet** production
+channels.
+
+- Plugin: [`cln/eddy_cln.py`](cln/eddy_cln.py) · lab image + ring setup: [`cln/`](cln/)
+- **Validation report + full replication guide** (regtest & signet):
+  [`docs/eddy-cln-VALIDATION.md`](docs/eddy-cln-VALIDATION.md)
+- Evidence: [`evidence/`](evidence/) · backlog: [`docs/TODO.md`](docs/TODO.md)
 
 ## How It Works
 
