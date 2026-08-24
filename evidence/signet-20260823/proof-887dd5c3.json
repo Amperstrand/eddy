@@ -1,0 +1,673 @@
+{
+ "pay": {
+  "destination": "02aa12c3d71555fb88d0bc4bae9aa752f40612925451ed4a9b554e4b739c3c5183",
+  "payment_hash": "b8f9a52e957ea35628d16195442030c7ee856cba162b2bfe4a39debcaf3c15ea",
+  "status": "complete",
+  "created_at": 1787518249,
+  "completed_at": 1787518250,
+  "label": "eddy-887dd5c368807b30",
+  "preimage": "18c993b2e4402426da147c270ab0ab93ea07a3e7b3a375dd13524682f34058c1",
+  "amount_msat": 2000000,
+  "amount_sent_msat": 2000000,
+  "created_index": 1479,
+  "updated_index": 1479
+ },
+ "invoice": {
+  "label": "eddy-887dd5c368807b30",
+  "bolt11": "lntbs20u1p4gkhffsp5l3gsnrtqu6mvkhtgrrjtquya62uwf4rva6v2m6afcewa2ycnrzyspp5hru62t540634v2x3vx25ggpsclhg2m96zc4jhlj2880teteuzh4qdpgv4jxg7fqvd5hycm4d3shg6t0dcsrswphv3jr2cenxqyjw5qcqp2rzjq0205vahju52xdkpc2hkgdtns2grzu9stmedee8usaetmldc3t54wpxe6vqqyzqqqqqqqqlgqqqqqqgq2q9qxpqysgqd9x7wec7xe6dgfzkf9tntwdcqmtjlfsmwj0v2fhuphjrq258pnrhdu0cdph654aa52ewm6w5zlpd45em4qrzp2zjad24f62um5667zsqv5arw4",
+  "payment_hash": "b8f9a52e957ea35628d16195442030c7ee856cba162b2bfe4a39debcaf3c15ea",
+  "amount_msat": 2000000,
+  "status": "paid",
+  "pay_index": 546,
+  "amount_received_msat": 2000000,
+  "paid_at": 1787518249,
+  "payment_preimage": "18c993b2e4402426da147c270ab0ab93ea07a3e7b3a375dd13524682f34058c1",
+  "description": "eddy circulation 887dd5c3",
+  "expires_at": 1788123049,
+  "created_index": 1207,
+  "updated_index": 1117
+ },
+ "channels": {
+  "hub": [
+   {
+    "peer_id": "02f8cbcfef5b368c93e5ebb756ecfb745645f6d1bd589aec3453106c350c7096d2",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 1,
+      "fee_proportional_millionths": 10
+     }
+    },
+    "last_stable_connection": 1787517550,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "35065b1df8209d0c24e1b61a9680f52ab529f42306bd2accf58ae8fd48b864de",
+    "last_tx_fee_msat": 1410000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319055x17x0",
+    "direction": 0,
+    "channel_id": "143bece9b58be57c4216ee5308fb9e749e38cdc2861bee8fe21d73111613a8f0",
+    "funding_txid": "f0a8131611731de28fee1b86c2cd389e749efb0853ee16427ce58bb5e9ec3b14",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1pl3zjjfeh34s2l30v97wm6ye7ckdu7ah285nswf3a5jtqy5hltt9qle7cwg",
+    "close_to": "5120fc452927378d60afc5ec2f9dbd133ec59bcf76ea3d2707263da4960252ff5aca",
+    "private": false,
+    "opener": "remote",
+    "alias": {
+     "local": "9547539x3238061x4299",
+     "remote": "9471700x4790866x56387"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 0,
+     "remote_funds_msat": 20000000,
+     "pushed_msat": 0,
+     "withheld": false
+    },
+    "to_us_msat": 2000000,
+    "min_to_us_msat": 0,
+    "max_to_us_msat": 2000000,
+    "total_msat": 20000000,
+    "fee_base_msat": 0,
+    "fee_proportional_millionths": 1,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 546000,
+    "our_reserve_msat": 546000,
+    "spendable_msat": 1454000,
+    "receivable_msat": 13148000,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 19454000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T20:46:14.878Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "remote",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 1,
+    "in_offered_msat": 2000000,
+    "in_payments_fulfilled": 1,
+    "in_fulfilled_msat": 2000000,
+    "out_payments_offered": 0,
+    "out_offered_msat": 0,
+    "out_payments_fulfilled": 0,
+    "out_fulfilled_msat": 0,
+    "htlcs": []
+   },
+   {
+    "peer_id": "033fa492a7286f33d41ab217f1c13fdf36cb6ee556010bc6f7b636bb771b0d7268",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 85140000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 85140000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     }
+    },
+    "last_stable_connection": 1787517341,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "ad4b04beecbf5486b5b0e0bf45e8f2d19062cd37fd7eec1b1fabf5c395b1de2c",
+    "last_tx_fee_msat": 1411000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319019x96x0",
+    "direction": 0,
+    "channel_id": "9d0e5c6ddb1c9e89d51af1ae6fd3fd2eebc9d4170952c1b5168d2eae1bdbd46e",
+    "funding_txid": "6ed4db1bae2e8d16b5c1520917d4c9eb2efdd36faef11ad5899e1cdb6d5c0e9d",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1pcehuvnnctqdtnjyuxn940ete2pj0k72k2nwpvd0rx0t60frc86zsgd6u3c",
+    "close_to": "5120c66fc64e78581ab9c89c34cb57e5795064fb795654dc1635e333d7a7a4783e85",
+    "private": false,
+    "opener": "remote",
+    "alias": {
+     "local": "3010097x16321320x32800",
+     "remote": "4661890x5103876x18474"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 0,
+     "remote_funds_msat": 86000000,
+     "pushed_msat": 0,
+     "withheld": false
+    },
+    "to_us_msat": 18000020,
+    "min_to_us_msat": 0,
+    "max_to_us_msat": 22000020,
+    "total_msat": 86000000,
+    "fee_base_msat": 0,
+    "fee_proportional_millionths": 1,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 860000,
+    "our_reserve_msat": 860000,
+    "spendable_msat": 17140020,
+    "receivable_msat": 62833980,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 85140000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T15:39:18.977Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "remote",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Reconnected, and reestablished.",
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 2,
+    "in_offered_msat": 22000020,
+    "in_payments_fulfilled": 2,
+    "in_fulfilled_msat": 22000020,
+    "out_payments_offered": 2,
+    "out_offered_msat": 4000000,
+    "out_payments_fulfilled": 2,
+    "out_fulfilled_msat": 4000000,
+    "htlcs": []
+   }
+  ],
+  "swap": [
+   {
+    "peer_id": "02f8cbcfef5b368c93e5ebb756ecfb745645f6d1bd589aec3453106c350c7096d2",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 1,
+      "fee_proportional_millionths": 10
+     }
+    },
+    "last_stable_connection": 1787517526,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "b20f4b35f3e519a3330b246ee860149c0997660e6b13615b6ef4b310dbf6235f",
+    "last_tx_fee_msat": 1410000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319055x18x0",
+    "direction": 1,
+    "channel_id": "90061ebb17a9f6878d3edab0efb2e3f30e7d999ff6a7bc8b139ab5fe5d8a777b",
+    "funding_txid": "7b778a5dfeb59a138bbca7f69f997d0ef3e3b2efb0da3e8d87f6a917bb1e0690",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1pwxqpml3g52x7t6zhla9ew6sx7mct5pnwemrr8f7f6kjeemz72m3q3t2em3",
+    "close_to": "512071801dfe28a28de5e857ff4b976a06f6f0ba066ecec633a7c9d5a59cec5e56e2",
+    "private": false,
+    "opener": "remote",
+    "alias": {
+     "local": "14122794x3611432x19465",
+     "remote": "11894844x14759886x12887"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 0,
+     "remote_funds_msat": 20000000,
+     "pushed_msat": 0,
+     "withheld": false
+    },
+    "to_us_msat": 13000000,
+    "min_to_us_msat": 0,
+    "max_to_us_msat": 15000000,
+    "total_msat": 20000000,
+    "fee_base_msat": 0,
+    "fee_proportional_millionths": 1,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 546000,
+    "our_reserve_msat": 546000,
+    "spendable_msat": 12454000,
+    "receivable_msat": 2148000,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 19454000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T20:46:14.886Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "remote",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 3,
+    "in_offered_msat": 15000000,
+    "in_payments_fulfilled": 3,
+    "in_fulfilled_msat": 15000000,
+    "out_payments_offered": 1,
+    "out_offered_msat": 2000000,
+    "out_payments_fulfilled": 1,
+    "out_fulfilled_msat": 2000000,
+    "htlcs": []
+   },
+   {
+    "peer_id": "02aa12c3d71555fb88d0bc4bae9aa752f40612925451ed4a9b554e4b739c3c5183",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 85140000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 85140000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     }
+    },
+    "last_stable_connection": 1787517341,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "e39c6c9d840b34c9feb5e29889b5a86952e2e2171a967373286e8d0ec75d5502",
+    "last_tx_fee_msat": 1411000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319019x96x0",
+    "direction": 1,
+    "channel_id": "9d0e5c6ddb1c9e89d51af1ae6fd3fd2eebc9d4170952c1b5168d2eae1bdbd46e",
+    "funding_txid": "6ed4db1bae2e8d16b5c1520917d4c9eb2efdd36faef11ad5899e1cdb6d5c0e9d",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1pysvg732t5c0y2wvtj58z5fm7z00sn79aq5632qqhmr0zyyjz23pqv72vu7",
+    "close_to": "512024188f454ba61e45398b950e2a277e13df09f8bd0535150017d8de2212425442",
+    "private": false,
+    "opener": "local",
+    "alias": {
+     "local": "4661890x5103876x18474",
+     "remote": "3010097x16321320x32800"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 86000000,
+     "remote_funds_msat": 0,
+     "pushed_msat": 0,
+     "psbt": "cHNidP8BAgQCAAAAAQMEKt4EAAEEAQEBBQECAQYBAwH7BAIAAAAAAQD9CgECAAAAAdPEZRT9Wf3YrVG6cJAXVCtxetb1fTcMpBaGPNLTKm6WAAAAAAAFrvmABUoBAAAAAAAAIgAgMTYtO1LdiAOp/zwgmsPFdAxnna1Aq17OBpIXgfDaUMRKAQAAAAAAACIAIPFb0WWi2DK+Uj4rgK6Clw+l9Hr9jwKctq2/d/PTeyKhtlIAAAAAAAAiACCUSLU/Rh0hAwj3SpArWL7TYukFFIrOnqaBE9pey2sGLgqMAAAAAAAAIgAg8Yr5xwAeg30qX4ufK4gHnB6qjZYegJhCmpDJfoFg2mdBYgEAAAAAACIAIAMtQxEjOwYrUqLD9Hq/VDvfdPS8ULmjbp1H4XUixq21DKpHIAEBK0FiAQAAAAAAIgAgAy1DESM7BitSosP0er9UO9909LxQuaNunUfhdSLGrbUBCG8CRzBEAiBr9qBh9pFWwMDX4ZJLa8FO0bvmtMpVzWy98WcZwK+v1gIgPHJi7jm0GG9ONQrgcv52SUSgAumbK54KuLt1fY8Ek3oBJSED6bjokb3KhuM2y1HP6Ni/I0TClHSXsc/6xeihySBjsn2tUbIBDiCY6soUySVE9dpfY/ZMmmc4Ab/oDjX0t36P0xUtm28mPAEPBAQAAAABEAQBAAAADPwJbGlnaHRuaW5nAgIAAQz8CWxpZ2h0bmluZwEIGQ6Aud/nfToAAQMI8E8BAAAAAAABBCIAIDnrYgf94xlcU/qCEubdhXq6sD/Kpc20NHfCH+WdMYANAAEDCM4MAAAAAAAAAQQiUSBM4W0tY5ImkNmipWGRr6S2JpXVJA298SxaGZv2eItSnSEHeEhpv+/SdeNwyeOScPHadWB4fyvqHSr2ctebGcvkwkcJABvviaLYAAAADPwJbGlnaHRuaW5nAQhDRnO6ZUx5IAA=",
+     "withheld": false
+    },
+    "to_us_msat": 67999980,
+    "min_to_us_msat": 63999980,
+    "max_to_us_msat": 86000000,
+    "total_msat": 86000000,
+    "fee_base_msat": 0,
+    "fee_proportional_millionths": 1,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 860000,
+    "our_reserve_msat": 860000,
+    "spendable_msat": 62833980,
+    "receivable_msat": 17140020,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 85140000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T15:39:19.010Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "user",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Reconnected, and reestablished.",
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 2,
+    "in_offered_msat": 4000000,
+    "in_payments_fulfilled": 2,
+    "in_fulfilled_msat": 4000000,
+    "out_payments_offered": 2,
+    "out_offered_msat": 22000020,
+    "out_payments_fulfilled": 2,
+    "out_fulfilled_msat": 22000020,
+    "htlcs": []
+   }
+  ],
+  "clboss": [
+   {
+    "peer_id": "033fa492a7286f33d41ab217f1c13fdf36cb6ee556010bc6f7b636bb771b0d7268",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 1,
+      "fee_proportional_millionths": 10
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     }
+    },
+    "last_stable_connection": 1787517526,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "f3a5d96fe5a346516d06e0e516531c8a32153017ba510e84c09705843354fb8f",
+    "last_tx_fee_msat": 1410000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319055x18x0",
+    "direction": 0,
+    "channel_id": "90061ebb17a9f6878d3edab0efb2e3f30e7d999ff6a7bc8b139ab5fe5d8a777b",
+    "funding_txid": "7b778a5dfeb59a138bbca7f69f997d0ef3e3b2efb0da3e8d87f6a917bb1e0690",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1phav9t452efkv34gqfsve4psn4zf4x9ep0zkjadcwwcj0ef8vae9qa9k5y3",
+    "close_to": "5120bf5855d68aca6cc8d5004c199a8613a89353172178ad2eb70e7624fca4ecee4a",
+    "private": false,
+    "opener": "local",
+    "alias": {
+     "local": "11894844x14759886x12887",
+     "remote": "14122794x3611432x19465"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 20000000,
+     "remote_funds_msat": 0,
+     "pushed_msat": 0,
+     "psbt": "cHNidP8BAgQCAAAAAQMETt4EAAEEAQEBBQECAQYBAwH7BAIAAAAAAQD9XwMCAAAAEz5eT5MsYj7E9twrpyjDB/ccGTD35vZH3R60hpg99+i+AAAAAAD9////1evapmfLF0PrY/nyYxptU9iqZ8gSbmP/bUjVWZDwAB0BAAAAAP3////OeP7r+ORcRT1DK5Oa+TYqMOWPtoFVFv7vrk5GBzG4RgEAAAAA/f///zB59dJPTvOVrYGaXKvoPcoUggaLtCwmJjBqKDQcCQGAAAAAAAD9////iO4//cPayJeq4NA0M35IHr98n+DFhtulG3edFTXUSA8AAAAAAP3///960N3PZlOPofsmptmS4ZsIkkhKSKpgRWSZmNVbssxI8QEAAAAA/f///3IMlCxHg7Tf5JMTWjwSEr/gCQde/klvLL6hwgkSJRiaAAAAAAD9////EMse6f1g6OoTvTA+i94cRUKs5USYqe9Nb5nQB8l5P54AAAAAAP3////0FeBa9nsbNIN9E3hu/52L8VKQooBXifVLL2VrzTzekwEAAAAA/f///+AaB8VzqOOO9TxJI21bUxh3fPFAVo1KptS6SzQ6mXHxAAAAAAD9////cMcuQuUlzxZE/yZSJqk9dbDv3kDWfpFaFRY90CTSnTYAAAAAAP3////qT129dReVW3cUWnjtVtLNDgCdDuuLi/vev3nRd7e7kAEAAAAA/f///6GU16g887medf57byal8DoPEtUCb8/uHfIbTeVuEPj3AQAAAAD9////zSa09LjM5K1fKJ81yc03IGz73IOvL0Pmtirf2r7/5wIAAAAAAP3////eMkNEOleguvaDVdW5xBvbA3Jj5HjBX3JDU15GDBWbEwAAAAAA/f///9T+msqcjbul3fygoHRhSQ7MG6weP8rWZDsOAZjmLFlOAQAAAAD9////O8Xsw2erh0ZGXWlRhExVU/GnFN21G+aG8mgoTzzAN2IAAAAAAP3///8pJ2rg9mismrGUq6Lz0pnV2ZBNoziMNAyMmcmlMugbOQEAAAAA/f///xc+AlUa4btGHeKZ+dqDOMBNJVetI1B9jqAELGW7blpZAAAAAAD9////Ah1ZBwAAAAAAFgAUsjUN21ha9mDsKWmzTu3D0KQKl/KoYQAAAAAAACJRIJzOkXRY0eKygZukBaiKQYhzZZYZbSF9zzuO5oCx3t0LLd0EAAEBHx1ZBwAAAAAAFgAUsjUN21ha9mDsKWmzTu3D0KQKl/IBCGsCRzBEAiAsBoG3dtt/tlSo0AU4HwWeiLeaP4plDi7Z8uZNu0GTywIgX1zlzehSKzMbVzMheyARFDV59P8gNjF36g9HgdqYiNMBIQP/ZUvvc1PncT3hKvXpS8LKXc8Gxjfv7RE+97rBmiztxAEOIAbKxM5pO5oolkDiRWrP1qo9Ko2UJVOWx53et0UOdQGAAQ8EAAAAAAEQBP3///8M/AlsaWdodG5pbmcCAgABDPwJbGlnaHRuaW5nAQh813whiysbBAABAwggTgAAAAAAAAEEIgAgdDlS8TtvWJ8lnwFidYosaONB+WEii6LW0VKW5Ay5TBkAAQMIdQYHAAAAAAABBCJRIEmcUaQgvvLCctHOWr3GwNkhFnbORlJcVStSWG3ReNalIQe4X13mPyRPD9B3t8sTpu7c5DTEPb8I5lZ1qSXojUU8kgkAp60AbwMAAAAM/AlsaWdodG5pbmcBCNypxFIxVNMKAA==",
+     "withheld": false
+    },
+    "to_us_msat": 7000000,
+    "min_to_us_msat": 5000000,
+    "max_to_us_msat": 20000000,
+    "total_msat": 20000000,
+    "fee_base_msat": 1,
+    "fee_proportional_millionths": 10,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 546000,
+    "our_reserve_msat": 546000,
+    "spendable_msat": 2148000,
+    "receivable_msat": 12454000,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 19454000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T20:46:14.869Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "user",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 1,
+    "in_offered_msat": 2000000,
+    "in_payments_fulfilled": 1,
+    "in_fulfilled_msat": 2000000,
+    "out_payments_offered": 3,
+    "out_offered_msat": 15000000,
+    "out_payments_fulfilled": 3,
+    "out_fulfilled_msat": 15000000,
+    "htlcs": []
+   },
+   {
+    "peer_id": "02aa12c3d71555fb88d0bc4bae9aa752f40612925451ed4a9b554e4b739c3c5183",
+    "peer_connected": true,
+    "reestablished": true,
+    "channel_type": {
+     "bits": [
+      12,
+      22
+     ],
+     "names": [
+      "static_remotekey/even",
+      "anchors/even"
+     ]
+    },
+    "ignore_fee_limits": true,
+    "updates": {
+     "local": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 1,
+      "fee_proportional_millionths": 10
+     },
+     "remote": {
+      "htlc_minimum_msat": 0,
+      "htlc_maximum_msat": 19454000,
+      "cltv_expiry_delta": 6,
+      "fee_base_msat": 0,
+      "fee_proportional_millionths": 1
+     }
+    },
+    "last_stable_connection": 1787517550,
+    "state": "CHANNELD_NORMAL",
+    "scratch_txid": "a0b449f78e8578d7eef0400e17e8b929afbed767b9576b3babf4f8a645ae5c34",
+    "last_tx_fee_msat": 1410000,
+    "lost_state": false,
+    "feerate": {
+     "perkw": 1255,
+     "perkb": 5020
+    },
+    "owner": "channeld",
+    "short_channel_id": "319055x17x0",
+    "direction": 1,
+    "channel_id": "143bece9b58be57c4216ee5308fb9e749e38cdc2861bee8fe21d73111613a8f0",
+    "funding_txid": "f0a8131611731de28fee1b86c2cd389e749efb0853ee16427ce58bb5e9ec3b14",
+    "funding_outnum": 0,
+    "close_to_addr": "tb1p4lzntlfzeat2jm90qj5d67rywm5m90542y2yenejvu99v8ef0r3q7mg4du",
+    "close_to": "5120afc535fd22cf56a96caf04a8dd786476e9b2be9551144ccf32670a561f2978e2",
+    "private": false,
+    "opener": "local",
+    "alias": {
+     "local": "9471700x4790866x56387",
+     "remote": "9547539x3238061x4299"
+    },
+    "features": [
+     "option_static_remotekey",
+     "option_anchors"
+    ],
+    "funding": {
+     "local_funds_msat": 20000000,
+     "remote_funds_msat": 0,
+     "pushed_msat": 0,
+     "psbt": "cHNidP8BAgQCAAAAAQMETt4EAAEEAQEBBQECAQYBAwH7BAIAAAAAAQD9SgECAAAABg7KcyvJXHXG5HK3Hu9rRx3qzcoJotdJDmVC25+v1YlcAAAAAAD9////tfhQki8qMgq3O8BwOKhOG3jzi5rTTm3OoDtNuq4lQtUAAAAAAP3////TxGUU/Vn92K1RunCQF1QrcXrW9X03DKQWhjzS0ypulgEAAAAA/f///6cWILJ248wrRpTwYW7x3NQaNkqXy2Je9DSybJDhHqF3AQAAAAD9////OIPOX9Ee9L9bbOpdhxnJJ7Ru7TdCynQ9M33VUYjKW7YAAAAAAP3///9O/LvkXhX0doGJt6xebZxY9HlQnZdQ3XU5R5XqDYlvQwAAAAAA/f///wITHAQAAAAAABYAFLI1DdtYWvZg7Clps07tw9CkCpfyqGEAAAAAAAAiUSCFXkd1Ur7GnJLdRb07Ub/EVdKPuxSs6LLvUsvnAo2DqC3dBAABAR8THAQAAAAAABYAFLI1DdtYWvZg7Clps07tw9CkCpfyAQhrAkcwRAIgbqBWim3ZUm8bnfU6hZrMSzdHUVp1tmbbB3vtuZXOypgCIGziigzUFFde1H83Z5ZIG/lLwev228ApO5p1IP4EaKchASED/2VL73NT53E94Sr16UvCyl3PBsY37+0RPve6wZos7cQBDiAma6KVYW+PbyHbgAPG97jIuLW5/DmbRUAsKCsh9c//fgEPBAAAAAABEAT9////DPwJbGlnaHRuaW5nAgIAAQz8CWxpZ2h0bmluZwEIHO0Tl0Vd/oIAAQMIIE4AAAAAAAABBCIAIDKImOPl7InWdFAfsyPunQUvyHo7wLMeg5Kqth1qIvajAAEDCGvJAwAAAAAAAQQiUSCoCeLz2rH6ysLnlFOeVBDAD1jUF+a56j0ag3LJsnO6zyEHYBQ6v2a0ayhvmlF6CdBNkrMl9oPjY/c53cT7QYV8878JADpazEQFAAAADPwJbGlnaHRuaW5nAQi9ZVX6nlg08AA=",
+     "withheld": false
+    },
+    "to_us_msat": 18000000,
+    "min_to_us_msat": 18000000,
+    "max_to_us_msat": 20000000,
+    "total_msat": 20000000,
+    "fee_base_msat": 1,
+    "fee_proportional_millionths": 10,
+    "dust_limit_msat": 546000,
+    "their_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "our_max_htlc_value_in_flight_msat": 18446744073709551615,
+    "their_reserve_msat": 546000,
+    "our_reserve_msat": 546000,
+    "spendable_msat": 13148000,
+    "receivable_msat": 1454000,
+    "minimum_htlc_in_msat": 0,
+    "minimum_htlc_out_msat": 0,
+    "maximum_htlc_out_msat": 19454000,
+    "their_to_self_delay": 6,
+    "our_to_self_delay": 6,
+    "max_accepted_htlcs": 483,
+    "state_changes": [
+     {
+      "timestamp": "2026-08-23T20:46:14.870Z",
+      "old_state": "CHANNELD_AWAITING_LOCKIN",
+      "new_state": "CHANNELD_NORMAL",
+      "cause": "user",
+      "message": "Lockin complete"
+     }
+    ],
+    "status": [
+     "CHANNELD_NORMAL:Channel ready for use."
+    ],
+    "in_payments_offered": 0,
+    "in_offered_msat": 0,
+    "in_payments_fulfilled": 0,
+    "in_fulfilled_msat": 0,
+    "out_payments_offered": 1,
+    "out_offered_msat": 2000000,
+    "out_payments_fulfilled": 1,
+    "out_fulfilled_msat": 2000000,
+    "htlcs": []
+   }
+  ]
+ }
+}

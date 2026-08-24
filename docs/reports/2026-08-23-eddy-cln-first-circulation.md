@@ -58,3 +58,22 @@ restores fees on settle/failure.
 
 Signet ring on existing inr2 nodes (hub/swap/clboss), 20k-sat
 federation-minimum scale, T1 wired to the broker's drift monitors.
+
+## Signet: FIRST LIVE ZERO-FEE CIRCULATION (2026-08-23 20:50 UTC)
+
+Run `887dd5c3` on the inr2 production ring (cln-hub → cln-swap →
+cln-clboss → cln-hub), 2,000,000 msat:
+
+- `amount_msat == amount_sent_msat == 2000000`, status `complete`,
+  invoice `paid` (`evidence/signet-20260823/proof-887dd5c3.json`)
+- every sender-side channel balance dropped exactly 2M and every
+  receiver side gained it — the cooperative rebalance moved real signet
+  liquidity at zero routing cost
+- waivers armed hop-by-hop and restored (swap's `319055x18x0` armed at
+  propose, watchdog-restored cleanly)
+
+Live-earned fix on the way: the ring-closing channel preference could
+echo the channel a hop RECEIVED the proposal on (swap armed its
+incoming hub channel instead of its outgoing clboss channel) — nodes
+with multiple channels to the initiator need the incoming channel
+explicitly excluded from selection.

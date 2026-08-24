@@ -291,10 +291,12 @@ def handle_propose(peer_from: str, msg: dict) -> None:
         best = None
         fallback = None
         others = on_ring - {init_id}  # the initiator's channel CLOSES the ring
+        incoming = hops[-1]["scid"] if hops else None
         for ch in plugin.rpc.listpeerchannels()["channels"]:
             sc = ch.get("short_channel_id")
             if (ch.get("state") == "CHANNELD_NORMAL" and ch.get("peer_connected") and sc
-                    and ch["peer_id"] not in others):
+                    and ch["peer_id"] not in others
+                    and sc != incoming):  # never echo the channel we received on
                 spendable = int(Millisatoshi(ch["spendable_msat"]).millisatoshis)
                 total = int(ch["total_msat"])
                 if spendable <= amt or spendable - amt <= total / 2:
