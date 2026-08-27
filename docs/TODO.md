@@ -11,11 +11,16 @@
       captured; arming race NOT reproduced (n=1) —
       `evidence/signet-20260825-lndring/`,
       `docs/reports/2026-08-25-d2-signet-lnd-ring.md`
+- [x] Signet: eddy-cln live circulation PROVEN (run 887dd5c3, 2k sat,
+      amount == sent, invoice paid) —
+      `evidence/signet-20260823/proof-887dd5c3.json`. Standing deploy
+      deliberately not kept: riders stripped from the prod fleet per
+      the compose contract (2026-08-25); reload on demand.
+- [x] Mutinynet: eddy-cln live circulation PROVEN (run d3b9a352, 5M
+      msat via hub-swap ring) — `evidence/mutinynet-20260824/`
+      (+ commit c70b80e resolves the custommsg red herring)
 
 ## Next
-- [ ] Signet: deploy eddy-cln to inr2 ring (hub/swap/clboss), first
-      live 20k-sat zero-fee circulation
-- [ ] Mutinynet deploy (same plugin, env-separated)
 - [ ] T1 trigger wired to broker drift monitors (auto-rebalance)
 - [ ] T2 standing solver (eddy parity mode) on CLN
 - [ ] Waiver amount-gating: only waive HTLCs within the circulation's
