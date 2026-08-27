@@ -1,0 +1,11 @@
+log_level: debug
+data_dir: /root/.eddy
+solver:
+  max_cycle_length: 5
+  stale_threshold: 90
+  min_push_amount: 500
+circulation:
+  timeout: 30s
+  payment_timeout: 60s
+gossip:
+  interval: 10s

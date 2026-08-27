@@ -1,0 +1,144 @@
+[P2] 21:13:37 killing old eddyd (host pids via docker top)...
+  l1 killed host-pid 1653620
+  l2 killed host-pid 1653655
+  l3 killed host-pid 1653688
+[P2] starting eddyd with config...
+  l1 eddyd procs: 1
+time=2026-08-25T21:13:39.754Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.839Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.936Z level=DEBUG msg="solver: no cycles found"
+  l2 eddyd procs: 1
+time=2026-08-25T21:13:39.795Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.840Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.934Z level=DEBUG msg="solver: no cycles found"
+  l3 eddyd procs: 1
+time=2026-08-25T21:13:39.882Z level=INFO msg="351023485217013760   03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618          20000        10000         6530           +0"
+time=2026-08-25T21:13:39.890Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.935Z level=DEBUG msg="solver: no cycles found"
+[P2] triangulating imbalance:
+  l3 invoice: lntbs50u1p4gupvfpp523s6j...
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   5461a921518a891b50d0ab3e095061952b71896ce51ee6ab7703ec3fac92d9be
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| IN_FLIGHT  |        0.009 |            - | 5000         | 0   |   319425 | 351023485217079296 | lsr3  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   5461a921518a891b50d0ab3e095061952b71896ce51ee6ab7703ec3fac92d9be
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| SUCCEEDED  |        0.009 |        0.150 | 5000         | 0   |   319425 | 351023485217079296 | lsr3  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   5000 + 0 sat
+Payment hash:   5461a921518a891b50d0ab3e095061952b71896ce51ee6ab7703ec3fac92d9be
+Payment status: SUCCEEDED, preimage: 8e7b6cc9d75feca2e536c4023cbbca2d3bcf76565677b15582d9304bbb2df15d
+  routed pay rc=0
+  l1 invoice: lntbs50u1p4gupvfpp5g7r52...
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   4787454e28d953341e69cc8f68dc563e24ae4199799c51a447f9d384d31a9eb9
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| IN_FLIGHT  |        0.007 |            - | 5000         | 0   |   319425 | 351023485217079296 | lsr1  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   4787454e28d953341e69cc8f68dc563e24ae4199799c51a447f9d384d31a9eb9
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| SUCCEEDED  |        0.007 |        0.147 | 5000         | 0   |   319425 | 351023485217079296 | lsr1  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   5000 + 0 sat
+Payment hash:   4787454e28d953341e69cc8f68dc563e24ae4199799c51a447f9d384d31a9eb9
+Payment status: SUCCEEDED, preimage: 2a66052f5ebb82ab59654606c06734f7b78659f542f98b4a0219e3731e5dc116
+  direct pay rc=0
+[P2] post-skew deltas:
+  --- l1:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+  --- l2:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+  --- l3:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+[P2] waiting for gossip+solver (240s)...
+[P2] 21:17:46 EVIDENCE CAPTURE
+=== l1 eddy.log (solver/circulation lines):
+time=2026-08-25T18:01:57.436Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.356Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:39.715Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.754Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.839Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.936Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.842Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.159Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.759Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.854Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.945Z level=DEBUG msg="solver: no cycles found"
+=== l1 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+=== l2 eddy.log (solver/circulation lines):
+time=2026-08-25T18:01:57.490Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.404Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:39.795Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.840Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.934Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.843Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.148Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.763Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.943Z level=DEBUG msg="solver: no cycles found"
+=== l2 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+=== l3 eddy.log (solver/circulation lines):
+time=2026-08-25T18:01:57.557Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.462Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:39.890Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.935Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.841Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.143Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.280Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.767Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.850Z level=DEBUG msg="solver: no cycles found"
+=== l3 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+[P2] final deltas:
+  --- l1:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+  --- l2:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+  --- l3:
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+[P2] DONE 21:17:48

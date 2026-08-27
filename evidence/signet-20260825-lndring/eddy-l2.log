@@ -1,0 +1,29 @@
+time=2026-08-25T18:01:57.476Z level=INFO msg="node started" alias=lsr2 pubkey=03a38318da5d600a
+time=2026-08-25T18:01:57.478Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T18:01:57.478Z level=INFO msg="351023485217013760   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000         9029        10000         -971"
+time=2026-08-25T18:01:57.478Z level=INFO msg="351023485216948225   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000        10000         9029           +0"
+time=2026-08-25T18:01:57.490Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.404Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:37.409Z level=INFO msg="drain complete"
+time=2026-08-25T21:13:39.778Z level=INFO msg="node started" alias=lsr2 pubkey=03a38318da5d600a
+time=2026-08-25T21:13:39.783Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T21:13:39.783Z level=INFO msg="351023485217013760   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000         6530        10000        -3470"
+time=2026-08-25T21:13:39.783Z level=INFO msg="351023485216948225   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000        10000         6530           +0"
+time=2026-08-25T21:13:39.795Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.840Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.934Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.843Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.148Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.763Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.943Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:18.867Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.225Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.634Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.765Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.952Z level=INFO msg="circ_propose: accepted, forwarding" cycle_id=f0fdfb431dc00bd6 next_hop=02b1e1bc9f2aa05f
+time=2026-08-25T21:23:20.184Z level=INFO msg="interceptor: RESUME_MODIFIED (waiving fees)" hash=cccb235d61f4b910 in=1530000 out=1530000 faked_in=1531002
+time=2026-08-25T21:23:20.185Z level=INFO msg="circulation: cleared by HTLC forward" cycle_id=f0fdfb431dc00bd6
+time=2026-08-25T21:23:20.410Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.769Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.842Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.947Z level=DEBUG msg="solver: no cycles found"

@@ -1,0 +1,421 @@
+[D2r] 18:01:56 skewing (drain l1->l2 15k sats)...
+[D2r] invoice ok (lntbs150u1p4gmky5pp5ae2hv0nkyatw...)
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   ee55763e762756e8416dc65f4dba194777a77a3633fc50bf2f22cb29b3e640b2
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   ee55763e762756e8416dc65f4dba194777a77a3633fc50bf2f22cb29b3e640b2
+Payment status: FAILED, reason: FAILURE_REASON_NO_ROUTE
+[lncli] FAILED
+[D2r] payinvoice rc=1
+[D2r] post-skew channel states:
+  chan local=10000 remote=9029 active=True
+  chan local=9029 remote=10000 active=True
+  chan local=9029 remote=10000 active=True
+  chan local=10000 remote=9029 active=True
+  chan local=9029 remote=10000 active=True
+  chan local=10000 remote=9029 active=True
+[D2r] 18:01:57 starting eddyd on all 3 nodes...
+l1 eddyd pid: OCI runtime exec failed: exec failed: unable to start container process: exec: "pgrep": executable file not found in $PATH
+NONE
+l2 eddyd pid: OCI runtime exec failed: exec failed: unable to start container process: exec: "pgrep": executable file not found in $PATH
+NONE
+l3 eddyd pid: OCI runtime exec failed: exec failed: unable to start container process: exec: "pgrep": executable file not found in $PATH
+NONE
+[D2r] waiting for solver cycles (scans every 30s, waiting 180s)...
+[D2r] 18:05:01 checking for circulations...
+--- l1 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+--- l1 eddyd log tail:
+--- l2 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+--- l2 eddyd log tail:
+--- l3 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+--- l3 eddyd log tail:
+[D2r] final channel states:
+--- l1:
+{
+    "channels": [
+        {
+            "active": true,
+            "remote_pubkey": "02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab",
+            "channel_point": "5ce4a49ec81eca5412294b135a1e81b80e472a945dded35c3ea26dd97ff301db:0",
+            "chan_id": "db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c",
+            "scid": "351023485217079296",
+            "scid_str": "319254x47x0",
+            "capacity": "20000",
+            "local_balance": "10000",
+            "remote_balance": "9029",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": false,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr3",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        },
+        {
+            "active": true,
+            "remote_pubkey": "03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618",
+            "channel_point": "af81539b4d4c4b2cfeda51b6c98a6e023c7413801a8e70ada21a527d8eb67dad:1",
+            "chan_id": "ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae",
+            "scid": "351023485216948225",
+            "scid_str": "319254x45x1",
+            "capacity": "20000",
+            "local_balance": "9029",
+            "remote_balance": "10000",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": true,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr2",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        }
+    ]
+}
+--- l2:
+{
+    "channels": [
+        {
+            "active": true,
+            "remote_pubkey": "02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab",
+            "channel_point": "74395bbc3f18ed3e24f1c945d5aa499d9e6d5a042576a9b429e4067fe6a393d3:0",
+            "chan_id": "d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974",
+            "scid": "351023485217013760",
+            "scid_str": "319254x46x0",
+            "capacity": "20000",
+            "local_balance": "9029",
+            "remote_balance": "10000",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": true,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr3",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        },
+        {
+            "active": true,
+            "remote_pubkey": "038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1",
+            "channel_point": "af81539b4d4c4b2cfeda51b6c98a6e023c7413801a8e70ada21a527d8eb67dad:1",
+            "chan_id": "ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae",
+            "scid": "351023485216948225",
+            "scid_str": "319254x45x1",
+            "capacity": "20000",
+            "local_balance": "10000",
+            "remote_balance": "9029",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": false,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr1",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        }
+    ]
+}
+--- l3:
+{
+    "channels": [
+        {
+            "active": true,
+            "remote_pubkey": "038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1",
+            "channel_point": "5ce4a49ec81eca5412294b135a1e81b80e472a945dded35c3ea26dd97ff301db:0",
+            "chan_id": "db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c",
+            "scid": "351023485217079296",
+            "scid_str": "319254x47x0",
+            "capacity": "20000",
+            "local_balance": "9029",
+            "remote_balance": "10000",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": true,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr1",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        },
+        {
+            "active": true,
+            "remote_pubkey": "03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618",
+            "channel_point": "74395bbc3f18ed3e24f1c945d5aa499d9e6d5a042576a9b429e4067fe6a393d3:0",
+            "chan_id": "d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974",
+            "scid": "351023485217013760",
+            "scid_str": "319254x46x0",
+            "capacity": "20000",
+            "local_balance": "10000",
+            "remote_balance": "9029",
+            "commit_fee": "311",
+            "commit_weight": "1116",
+            "fee_per_kw": "277",
+            "unsettled_balance": "0",
+            "total_satoshis_sent": "0",
+            "total_satoshis_received": "0",
+            "num_updates": "3",
+            "pending_htlcs": [],
+            "csv_delay": 144,
+            "private": false,
+            "initiator": false,
+            "chan_status_flags": "ChanStatusDefault",
+            "local_chan_reserve_sat": "354",
+            "remote_chan_reserve_sat": "354",
+            "static_remote_key": false,
+            "commitment_type": "ANCHORS",
+            "lifetime": "44665",
+            "uptime": "44665",
+            "close_address": "",
+            "push_amount_sat": "10000",
+            "thaw_height": 0,
+            "local_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "remote_constraints": {
+                "csv_delay": 144,
+                "chan_reserve_sat": "354",
+                "dust_limit_sat": "354",
+                "max_pending_amt_msat": "19800000",
+                "min_htlc_msat": "1",
+                "max_accepted_htlcs": 483
+            },
+            "alias_scids": [],
+            "zero_conf": false,
+            "zero_conf_confirmed_scid": "0",
+            "peer_alias": "lsr2",
+            "peer_scid_alias": "0",
+            "memo": "",
+            "custom_channel_data": ""
+        }
+    ]
+}
+[D2r] payments during window:
+--- l1 listpayments (in-flight/settled last):
+{
+    "payments":  [],
+    "first_index_offset":  "0",
+    "last_index_offset":  "0",
+    "total_num_payments":  "0"
+}
+--- l2 listpayments (in-flight/settled last):
+{
+    "payments":  [],
+    "first_index_offset":  "0",
+    "last_index_offset":  "0",
+    "total_num_payments":  "0"
+}
+--- l3 listpayments (in-flight/settled last):
+{
+    "payments":  [],
+    "first_index_offset":  "0",
+    "last_index_offset":  "0",
+    "total_num_payments":  "0"
+}
+[D2r] DONE 18:05:02

@@ -1,0 +1,253 @@
+[P3] 21:23:17 eddyd status:
+  l1 eddyd procs: 1
+  l2 eddyd procs: 1
+  l3 eddyd procs: 1
+[P3] BEFORE skew:
+  --- l1:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr3 local=10000 remote=6530 delta=+0
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr2 local=6530 remote=10000 delta=-3470
+  --- l2:
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr3 local=6530 remote=10000 delta=-3470
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr1 local=10000 remote=6530 delta=+0
+  --- l3:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr1 local=6530 remote=10000 delta=-3470
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr2 local=10000 remote=6530 delta=+0
+[P3] rotational skew (l2->l1, l3->l2, l1->l3, 5000 each):
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   4fb8f2251ee93aee61f0f19edd38d4a9c87495258fe517f4bf58892bc6ed046f
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| IN_FLIGHT  |        0.006 |            - | 5000         | 0   |   319425 | 351023485216948225 | lsr1  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   4fb8f2251ee93aee61f0f19edd38d4a9c87495258fe517f4bf58892bc6ed046f
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| SUCCEEDED  |        0.006 |        0.129 | 5000         | 0   |   319425 | 351023485216948225 | lsr1  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   5000 + 0 sat
+Payment hash:   4fb8f2251ee93aee61f0f19edd38d4a9c87495258fe517f4bf58892bc6ed046f
+Payment status: SUCCEEDED, preimage: fcf6f246cf4d1515d4ca09f433cf0d004c084c251738ff25efe0fbfc3a941858
+  l2->l1 rc=0
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   c114b43f73a9c9e608ebd1aa2d6834891094d0d12f4cbecad5be828424423b6e
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| IN_FLIGHT  |        0.003 |            - | 5000         | 0   |   319425 | 351023485217013760 | lsr2  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   c114b43f73a9c9e608ebd1aa2d6834891094d0d12f4cbecad5be828424423b6e
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| SUCCEEDED  |        0.003 |        0.124 | 5000         | 0   |   319425 | 351023485217013760 | lsr2  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   5000 + 0 sat
+Payment hash:   c114b43f73a9c9e608ebd1aa2d6834891094d0d12f4cbecad5be828424423b6e
+Payment status: SUCCEEDED, preimage: aa9766be172fce902400b71b9f5a43bda2b732860ac2d9ab378b74113fca7817
+  l3->l2 rc=0
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
++------------+--------------+--------------+--------------+-----+----------+----------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   147a03bf232281470089e146d883efca25a143c1c5487fab8592c50079091fef
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| IN_FLIGHT  |        0.004 |            - | 5000         | 0   |   319425 | 351023485217079296 | lsr3  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   0 + 0 sat
+Payment hash:   147a03bf232281470089e146d883efca25a143c1c5487fab8592c50079091fef
+Payment status: IN_FLIGHT
+[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K+------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| HTLC_STATE | ATTEMPT_TIME | RESOLVE_TIME | RECEIVER_AMT | FEE | TIMELOCK | CHAN_OUT           | ROUTE |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+| SUCCEEDED  |        0.004 |        0.128 | 5000         | 0   |   319425 | 351023485217079296 | lsr3  |
++------------+--------------+--------------+--------------+-----+----------+--------------------+-------+
+Amount + fee:   5000 + 0 sat
+Payment hash:   147a03bf232281470089e146d883efca25a143c1c5487fab8592c50079091fef
+Payment status: SUCCEEDED, preimage: 2d415583528b4311077f230e9cb8e6a5465ab5478fd444caffac89c51de6c1ea
+  l1->l3 rc=0
+[P3] AFTER skew (expect rotational positive deltas):
+  --- l1:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr3 local=5000 remote=11530 delta=-5000
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr2 local=11530 remote=5000 delta=+1530
+  --- l2:
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr3 local=11530 remote=5000 delta=+1530
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr1 local=5000 remote=11530 delta=-5000
+  --- l3:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr1 local=11530 remote=5000 delta=+1530
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr2 local=5000 remote=11530 delta=-5000
+[P3] waiting for gossip+solver+circulation (240s)...
+[P3] 21:27:19 EVIDENCE:
+=== l1 eddy.log tail:
+time=2026-08-25T18:01:57.418Z level=INFO msg="node started" alias=lsr1 pubkey=038c7572ff1c0098
+time=2026-08-25T18:01:57.422Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T18:01:57.422Z level=INFO msg="351023485217079296   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000        10000         9029           +0"
+time=2026-08-25T18:01:57.422Z level=INFO msg="351023485216948225   03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618          20000         9029        10000         -971"
+time=2026-08-25T18:01:57.436Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.356Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:37.359Z level=INFO msg="drain complete"
+time=2026-08-25T21:13:39.696Z level=INFO msg="node started" alias=lsr1 pubkey=038c7572ff1c0098
+time=2026-08-25T21:13:39.700Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T21:13:39.700Z level=INFO msg="351023485217079296   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000        10000         6530           +0"
+time=2026-08-25T21:13:39.700Z level=INFO msg="351023485216948225   03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618          20000         6530        10000        -3470"
+time=2026-08-25T21:13:39.715Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.754Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.839Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.936Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.842Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.159Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.759Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.854Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.945Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:18.866Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.229Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.636Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.757Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.950Z level=INFO msg="circ_propose: accepted, forwarding" cycle_id=f0fdfb431dc00bd6 next_hop=03a38318da5d600a
+time=2026-08-25T21:23:20.069Z level=INFO msg="interceptor: RESUME_MODIFIED (waiving fees)" hash=cccb235d61f4b910 in=1530000 out=1530000 faked_in=1531002
+time=2026-08-25T21:23:20.069Z level=INFO msg="circulation: cleared by HTLC forward" cycle_id=f0fdfb431dc00bd6
+time=2026-08-25T21:23:20.414Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.765Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.848Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.943Z level=DEBUG msg="solver: no cycles found"
+=== l1 fwdinghistory:
+{
+    "forwarding_events":  [
+        {
+            "timestamp":  "1787693000",
+            "chan_id_in":  "351023485217079296",
+            "chan_id_out":  "351023485216948225",
+            "amt_in":  "1531",
+            "amt_out":  "1530",
+            "fee":  "1",
+            "fee_msat":  "1002",
+            "amt_in_msat":  "1531002",
+            "amt_out_msat":  "1530000",
+            "timestamp_ns":  "1787693000306633307",
+            "peer_alias_in":  "lsr3",
+            "peer_alias_out":  "lsr2",
+            "incoming_htlc_id":  "1",
+            "outgoing_htlc_id":  "0"
+        }
+    ],
+    "last_offset_index":  1
+}
+=== l2 eddy.log tail:
+time=2026-08-25T18:01:57.476Z level=INFO msg="node started" alias=lsr2 pubkey=03a38318da5d600a
+time=2026-08-25T18:01:57.478Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T18:01:57.478Z level=INFO msg="351023485217013760   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000         9029        10000         -971"
+time=2026-08-25T18:01:57.478Z level=INFO msg="351023485216948225   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000        10000         9029           +0"
+time=2026-08-25T18:01:57.490Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.404Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:37.409Z level=INFO msg="drain complete"
+time=2026-08-25T21:13:39.778Z level=INFO msg="node started" alias=lsr2 pubkey=03a38318da5d600a
+time=2026-08-25T21:13:39.783Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T21:13:39.783Z level=INFO msg="351023485217013760   02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab          20000         6530        10000        -3470"
+time=2026-08-25T21:13:39.783Z level=INFO msg="351023485216948225   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000        10000         6530           +0"
+time=2026-08-25T21:13:39.795Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.840Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:39.934Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.843Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.148Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.763Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.943Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:18.867Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.225Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.634Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.765Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.952Z level=INFO msg="circ_propose: accepted, forwarding" cycle_id=f0fdfb431dc00bd6 next_hop=02b1e1bc9f2aa05f
+time=2026-08-25T21:23:20.184Z level=INFO msg="interceptor: RESUME_MODIFIED (waiving fees)" hash=cccb235d61f4b910 in=1530000 out=1530000 faked_in=1531002
+time=2026-08-25T21:23:20.185Z level=INFO msg="circulation: cleared by HTLC forward" cycle_id=f0fdfb431dc00bd6
+time=2026-08-25T21:23:20.410Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.769Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.842Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.947Z level=DEBUG msg="solver: no cycles found"
+=== l2 fwdinghistory:
+{
+    "forwarding_events":  [
+        {
+            "timestamp":  "1787693000",
+            "chan_id_in":  "351023485216948225",
+            "chan_id_out":  "351023485217013760",
+            "amt_in":  "1531",
+            "amt_out":  "1530",
+            "fee":  "1",
+            "fee_msat":  "1002",
+            "amt_in_msat":  "1531002",
+            "amt_out_msat":  "1530000",
+            "timestamp_ns":  "1787693000303487872",
+            "peer_alias_in":  "lsr1",
+            "peer_alias_out":  "lsr3",
+            "incoming_htlc_id":  "0",
+            "outgoing_htlc_id":  "0"
+        }
+    ],
+    "last_offset_index":  1
+}
+=== l3 eddy.log tail:
+time=2026-08-25T18:01:57.539Z level=INFO msg="node started" alias=lsr3 pubkey=02b1e1bc9f2aa05f
+time=2026-08-25T18:01:57.540Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T18:01:57.540Z level=INFO msg="351023485217079296   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000         9029        10000         -971"
+time=2026-08-25T18:01:57.540Z level=INFO msg="351023485217013760   03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618          20000        10000         9029           +0"
+time=2026-08-25T18:01:57.557Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:37.462Z level=INFO msg="shutting down, stopping solver"
+time=2026-08-25T21:13:37.486Z level=INFO msg="drain complete"
+time=2026-08-25T21:13:39.881Z level=INFO msg="node started" alias=lsr3 pubkey=02b1e1bc9f2aa05f
+time=2026-08-25T21:13:39.882Z level=INFO msg="CHANNEL_ID           PEER                                                                     CAPACITY        LOCAL       REMOTE        DELTA"
+time=2026-08-25T21:13:39.882Z level=INFO msg="351023485217079296   038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1          20000         6530        10000        -3470"
+time=2026-08-25T21:13:39.882Z level=INFO msg="351023485217013760   03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618          20000        10000         6530           +0"
+time=2026-08-25T21:13:39.890Z level=INFO msg="interceptor: stream connected"
+time=2026-08-25T21:13:39.935Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:45.841Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.143Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:46.280Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.767Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:13:49.850Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:18.871Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.231Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.629Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.762Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:19.937Z level=INFO msg="solver: cycle found" path="02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab → 038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1 → 03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618" push_sats=1530
+time=2026-08-25T21:23:19.948Z level=INFO msg="solver: sending circ_propose" cycle_id=f0fdfb431dc00bd6 next_hop=038c7572ff1c0098 invoice_amt=1530
+time=2026-08-25T21:23:19.953Z level=INFO msg="circ_propose: ring complete, executing payment" cycle_id=f0fdfb431dc00bd6
+time=2026-08-25T21:23:19.954Z level=INFO msg="circulation: sending payment" cycle_id=f0fdfb431dc00bd6 amount_sats=1530
+time=2026-08-25T21:23:20.319Z level=INFO msg="circulation: COMPLETE" cycle_id=f0fdfb431dc00bd6 amount_sats=1530
+time=2026-08-25T21:23:20.404Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.778Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.846Z level=DEBUG msg="solver: no cycles found"
+time=2026-08-25T21:23:29.937Z level=DEBUG msg="solver: no cycles found"
+=== l3 fwdinghistory:
+{
+    "forwarding_events":  [],
+    "last_offset_index":  0
+}
+[P3] FINAL deltas:
+  --- l1:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr3 local=6530 remote=10000 delta=-3470
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr2 local=10000 remote=6530 delta=+0
+  --- l2:
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr3 local=10000 remote=6530 delta=+0
+    chan=ad7db68e7d521aa2ad708e1a8013743c026e8ac9b651dafe2c4b4c4d9b5381ae peer=lsr1 local=6530 remote=10000 delta=-3470
+  --- l3:
+    chan=db01f37fd96da23e5cd3de5d942a470eb8811e5a134b291254ca1ec89ea4e45c peer=lsr1 local=10000 remote=6530 delta=+0
+    chan=d393a3e67f06e429b4a97625045a6d9e9d49aad545c9f1243eed183fbc5b3974 peer=lsr2 local=6530 remote=10000 delta=-3470
+[P3] DONE 21:27:20

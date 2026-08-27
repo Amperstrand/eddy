@@ -1,0 +1,21 @@
+{
+    "forwarding_events":  [
+        {
+            "timestamp":  "1787693000",
+            "chan_id_in":  "351023485216948225",
+            "chan_id_out":  "351023485217013760",
+            "amt_in":  "1531",
+            "amt_out":  "1530",
+            "fee":  "1",
+            "fee_msat":  "1002",
+            "amt_in_msat":  "1531002",
+            "amt_out_msat":  "1530000",
+            "timestamp_ns":  "1787693000303487872",
+            "peer_alias_in":  "lsr1",
+            "peer_alias_out":  "lsr3",
+            "incoming_htlc_id":  "0",
+            "outgoing_htlc_id":  "0"
+        }
+    ],
+    "last_offset_index":  1
+}

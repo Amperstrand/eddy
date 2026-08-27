@@ -1,0 +1,220 @@
+{
+    "payments":  [
+        {
+            "payment_hash":  "4787454e28d953341e69cc8f68dc563e24ae4199799c51a447f9d384d31a9eb9",
+            "value":  "5000",
+            "creation_date":  "1787692426",
+            "fee":  "0",
+            "payment_preimage":  "2a66052f5ebb82ab59654606c06734f7b78659f542f98b4a0219e3731e5dc116",
+            "value_sat":  "5000",
+            "value_msat":  "5000000",
+            "payment_request":  "lntbs50u1p4gupvfpp5g7r52n3gm9fng8nfej8k3hzk8cj2usve0xw9rfz8l8fcf5c6n6usdqjwd4k2aedv35hyetrwscqzzsxqyz5vqsp5h3arngrr589n4c74pfu9pexk8lakdzlechy90dvac3xxgvrrz0rs9qxpqysgq82sgg4saj5vxwqw5rrq4zvuufuaehypzzncudj5tshjlsnserxnzurcwk2fkhxwq66ddy4tf6fykqack0ggpa5e3mvjanwt3mh8hnzcp6alwt5",
+            "status":  "SUCCEEDED",
+            "fee_sat":  "0",
+            "fee_msat":  "0",
+            "creation_time_ns":  "1787692426023726011",
+            "htlcs":  [
+                {
+                    "attempt_id":  "1",
+                    "status":  "SUCCEEDED",
+                    "route":  {
+                        "total_time_lock":  319425,
+                        "total_fees":  "0",
+                        "total_amt":  "5000",
+                        "hops":  [
+                            {
+                                "chan_id":  "351023485217079296",
+                                "chan_capacity":  "20000",
+                                "amt_to_forward":  "5000",
+                                "fee":  "0",
+                                "expiry":  319425,
+                                "amt_to_forward_msat":  "5000000",
+                                "fee_msat":  "0",
+                                "pub_key":  "038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1",
+                                "tlv_payload":  true,
+                                "mpp_record":  {
+                                    "payment_addr":  "bc7a39a063a1cb3ae3d50a7850e4d63ffb668bf9c5c857b59dc44c64306313c7",
+                                    "total_amt_msat":  "5000000"
+                                },
+                                "amp_record":  null,
+                                "custom_records":  {},
+                                "metadata":  "",
+                                "blinding_point":  "",
+                                "encrypted_data":  "",
+                                "total_amt_msat":  "0"
+                            }
+                        ],
+                        "total_fees_msat":  "0",
+                        "total_amt_msat":  "5000000",
+                        "first_hop_amount_msat":  "5000000",
+                        "custom_channel_data":  ""
+                    },
+                    "attempt_time_ns":  "1787692426031320943",
+                    "resolve_time_ns":  "1787692426171351985",
+                    "failure":  null,
+                    "preimage":  "2a66052f5ebb82ab59654606c06734f7b78659f542f98b4a0219e3731e5dc116"
+                }
+            ],
+            "payment_index":  "1",
+            "failure_reason":  "FAILURE_REASON_NONE",
+            "first_hop_custom_records":  {}
+        },
+        {
+            "payment_hash":  "c114b43f73a9c9e608ebd1aa2d6834891094d0d12f4cbecad5be828424423b6e",
+            "value":  "5000",
+            "creation_date":  "1787692998",
+            "fee":  "0",
+            "payment_preimage":  "aa9766be172fce902400b71b9f5a43bda2b732860ac2d9ab378b74113fca7817",
+            "value_sat":  "5000",
+            "value_msat":  "5000000",
+            "payment_request":  "lntbs50u1p4gup7xpp5cy2tg0mn48y7vz8t6x4z66p53ygff5x39axtajk4h6pggfzz8dhqdqgwfhhgtfjcqzzsxqyz5vqsp5jpdhltuzmv7689z7hvez5srf6a69ta59a3k6k23h3ykef68ugjgs9qxpqysgq4u3vh5lz09rpyyq8e3e3t95pd2zxrrv2slsenheads3cx3vvywr9tnvm04s0fdt8kzmeru97qwnewpjxlfhpze4xj6j0hsh4j4p9g4sq475tj9",
+            "status":  "SUCCEEDED",
+            "fee_sat":  "0",
+            "fee_msat":  "0",
+            "creation_time_ns":  "1787692998993623329",
+            "htlcs":  [
+                {
+                    "attempt_id":  "2",
+                    "status":  "SUCCEEDED",
+                    "route":  {
+                        "total_time_lock":  319425,
+                        "total_fees":  "0",
+                        "total_amt":  "5000",
+                        "hops":  [
+                            {
+                                "chan_id":  "351023485217013760",
+                                "chan_capacity":  "20000",
+                                "amt_to_forward":  "5000",
+                                "fee":  "0",
+                                "expiry":  319425,
+                                "amt_to_forward_msat":  "5000000",
+                                "fee_msat":  "0",
+                                "pub_key":  "03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618",
+                                "tlv_payload":  true,
+                                "mpp_record":  {
+                                    "payment_addr":  "905b7faf82db3da3945ebb322a4069d77455f685ec6dab2a37892d94e8fc4491",
+                                    "total_amt_msat":  "5000000"
+                                },
+                                "amp_record":  null,
+                                "custom_records":  {},
+                                "metadata":  "",
+                                "blinding_point":  "",
+                                "encrypted_data":  "",
+                                "total_amt_msat":  "0"
+                            }
+                        ],
+                        "total_fees_msat":  "0",
+                        "total_amt_msat":  "5000000",
+                        "first_hop_amount_msat":  "5000000",
+                        "custom_channel_data":  ""
+                    },
+                    "attempt_time_ns":  "1787692998996974114",
+                    "resolve_time_ns":  "1787692999118599429",
+                    "failure":  null,
+                    "preimage":  "aa9766be172fce902400b71b9f5a43bda2b732860ac2d9ab378b74113fca7817"
+                }
+            ],
+            "payment_index":  "2",
+            "failure_reason":  "FAILURE_REASON_NONE",
+            "first_hop_custom_records":  {}
+        },
+        {
+            "payment_hash":  "cccb235d61f4b9104604b57905f2b35f46ce90962a59d3a4dfb07e0b4094d4eb",
+            "value":  "1530",
+            "creation_date":  "1787692999",
+            "fee":  "0",
+            "payment_preimage":  "76453d5630a48624999fccf773e29a918448ab23d46d5d99d4e53db0c11f4fd8",
+            "value_sat":  "1530",
+            "value_msat":  "1530000",
+            "payment_request":  "",
+            "status":  "SUCCEEDED",
+            "fee_sat":  "0",
+            "fee_msat":  "0",
+            "creation_time_ns":  "1787692999955247556",
+            "htlcs":  [
+                {
+                    "attempt_id":  "3",
+                    "status":  "SUCCEEDED",
+                    "route":  {
+                        "total_time_lock":  319622,
+                        "total_fees":  "0",
+                        "total_amt":  "1530",
+                        "hops":  [
+                            {
+                                "chan_id":  "351023485217079296",
+                                "chan_capacity":  "20000",
+                                "amt_to_forward":  "1530",
+                                "fee":  "0",
+                                "expiry":  319542,
+                                "amt_to_forward_msat":  "1530000",
+                                "fee_msat":  "0",
+                                "pub_key":  "038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1",
+                                "tlv_payload":  true,
+                                "mpp_record":  null,
+                                "amp_record":  null,
+                                "custom_records":  {},
+                                "metadata":  "",
+                                "blinding_point":  "",
+                                "encrypted_data":  "",
+                                "total_amt_msat":  "0"
+                            },
+                            {
+                                "chan_id":  "351023485216948225",
+                                "chan_capacity":  "20000",
+                                "amt_to_forward":  "1530",
+                                "fee":  "0",
+                                "expiry":  319462,
+                                "amt_to_forward_msat":  "1530000",
+                                "fee_msat":  "0",
+                                "pub_key":  "03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618",
+                                "tlv_payload":  true,
+                                "mpp_record":  null,
+                                "amp_record":  null,
+                                "custom_records":  {},
+                                "metadata":  "",
+                                "blinding_point":  "",
+                                "encrypted_data":  "",
+                                "total_amt_msat":  "0"
+                            },
+                            {
+                                "chan_id":  "351023485217013760",
+                                "chan_capacity":  "20000",
+                                "amt_to_forward":  "1530",
+                                "fee":  "0",
+                                "expiry":  319382,
+                                "amt_to_forward_msat":  "1530000",
+                                "fee_msat":  "0",
+                                "pub_key":  "02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab",
+                                "tlv_payload":  true,
+                                "mpp_record":  {
+                                    "payment_addr":  "954ae0802a62453954aae040318dd716d7b5a4dca78f3d1fd6739363c797ce0b",
+                                    "total_amt_msat":  "1530000"
+                                },
+                                "amp_record":  null,
+                                "custom_records":  {},
+                                "metadata":  "",
+                                "blinding_point":  "",
+                                "encrypted_data":  "",
+                                "total_amt_msat":  "0"
+                            }
+                        ],
+                        "total_fees_msat":  "0",
+                        "total_amt_msat":  "1530000",
+                        "first_hop_amount_msat":  "1530000",
+                        "custom_channel_data":  ""
+                    },
+                    "attempt_time_ns":  "1787692999956886940",
+                    "resolve_time_ns":  "1787693000314178250",
+                    "failure":  null,
+                    "preimage":  "76453d5630a48624999fccf773e29a918448ab23d46d5d99d4e53db0c11f4fd8"
+                }
+            ],
+            "payment_index":  "3",
+            "failure_reason":  "FAILURE_REASON_NONE",
+            "first_hop_custom_records":  {}
+        }
+    ],
+    "first_index_offset":  "1",
+    "last_index_offset":  "3",
+    "total_num_payments":  "0"
+}

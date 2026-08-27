@@ -1,0 +1,66 @@
+{
+  "run": "f0fdfb431dc00bd6",
+  "date_utc": "2026-08-25T21:23:19Z",
+  "network": "signet",
+  "host": "inr2.cashu.exchange (docker compose project lnd-signet-ring)",
+  "stack": {
+    "lnd": "0.20.0-beta",
+    "bitcoind": "/Satoshi:31.1.0/",
+    "eddyd": "upstream eddy (module github.com/eddy), binary /opt/inr2-swapnet/lnd-signet/eddyd; config min_push_amount=500, log_level=debug, gossip 10s (eddy-config-l*.yaml)"
+  },
+  "topology": {
+    "nodes": {
+      "lsr1": "038c7572ff1c0098dd4f11726828be13fee1171a41db0ada75a58aeb7c54e94cb1",
+      "lsr2": "03a38318da5d600a1eda76f1cddbcb29d70cf1a173407567d74fda58dfb37d0618",
+      "lsr3": "02b1e1bc9f2aa05f7fa21d3261dff076b654da648eaf2d44649baa0e32725208ab"
+    },
+    "channels": {
+      "351023485217079296": "lsr3<->lsr1",
+      "351023485216948225": "lsr1<->lsr2",
+      "351023485217013760": "lsr2<->lsr3"
+    },
+    "capacity_sat_each": 20000
+  },
+  "induced_skew": "rotational direct payments l2->l1, l3->l2, l1->l3 (5000 sat each) left every push-direction edge local-heavy at 11530/5000 (delta +1530 over the 10000/6530 baseline)",
+  "timeline": [
+    {"t": "21:23:19.937Z", "node": "lsr3", "event": "solver: cycle found", "detail": "path l3->l1->l2->l3, push_sats=1530"},
+    {"t": "21:23:19.948Z", "node": "lsr3", "event": "solver: sending circ_propose", "detail": "next_hop lsr1, invoice_amt=1530"},
+    {"t": "21:23:19.950Z", "node": "lsr1", "event": "circ_propose: accepted, forwarding", "detail": "next_hop lsr2 (interceptor armed here)"},
+    {"t": "21:23:19.952Z", "node": "lsr2", "event": "circ_propose: accepted, forwarding", "detail": "next_hop lsr3 (interceptor armed here)"},
+    {"t": "21:23:19.953Z", "node": "lsr3", "event": "circ_propose: ring complete, executing payment"},
+    {"t": "21:23:19.954Z", "node": "lsr3", "event": "circulation: sending payment", "detail": "amount_sats=1530"},
+    {"t": "21:23:20.069Z", "node": "lsr1", "event": "interceptor: RESUME_MODIFIED (waiving fees)", "detail": "hash=cccb235d61f4b910 in=1530000 out=1530000 faked_in=1531002"},
+    {"t": "21:23:20.184Z", "node": "lsr2", "event": "interceptor: RESUME_MODIFIED (waiving fees)", "detail": "hash=cccb235d61f4b910 in=1530000 out=1530000 faked_in=1531002"},
+    {"t": "21:23:20.319Z", "node": "lsr3", "event": "circulation: COMPLETE", "detail": "amount_sats=1530"}
+  ],
+  "payment_proof": {
+    "payment_hash": "cccb235d61f4b9104604b57905f2b35f46ce90962a59d3a4dfb07e0b4094d4eb",
+    "status": "SUCCEEDED",
+    "value_sat": 1530,
+    "total_fees": "0",
+    "hop_fees_msat": ["0", "0"],
+    "source": "d2-l3-payments.json"
+  },
+  "invoice_proof": {
+    "r_hash": "cccb235d61f4b9104604b57905f2b35f46ce90962a59d3a4dfb07e0b4094d4eb",
+    "state": "SETTLED",
+    "value_sat": 1530,
+    "amt_paid_msat": 1530000,
+    "r_preimage": "76453d5630a48624999fccf773e29a918448ab23d46d5d99d4e53db0c11f4fd8",
+    "source": "d2-l3-invoices.json"
+  },
+  "forwarding_events": {
+    "lsr1": {"chan_in": "351023485217079296", "chan_out": "351023485216948225", "amt_in_msat": 1531002, "amt_out_msat": 1530000, "fee_msat_recorded": 1002},
+    "lsr2": {"chan_in": "351023485216948225", "chan_out": "351023485217013760", "amt_in_msat": 1531002, "amt_out_msat": 1530000, "fee_msat_recorded": 1002},
+    "note": "recorded fee_msat is a BOOKKEEPING ARTIFACT: the interceptor reports a faked InAmountMsat (1531002) so LND's required-fee validation passes while the wire HTLC carried 1530000 in and 1530000 out. Real extracted value: 0 msat (initiator total_fees=0, amt_paid==value)."
+  },
+  "balance_outcome": {
+    "post_skew_push_edges": "11530 local / 5000 remote (delta +1530 over the 10000 capacity midpoint)",
+    "post_circulation": "every push edge exactly 10000 local (delta +0), receiving edges 5000->6530; every edge moved exactly 1530 sat in push direction; no positive deltas remain (solver idles at 'no cycles found')",
+    "fee_retention_check": "balance arithmetic is whole-sat exact (6530 = 5000+1530); a retained 1002 msat fee would show 6531 — zero real fees confirmed on-channel, not just in route accounting",
+    "wallet_net_delta": "zero (l3 paid exactly 1530 to its own invoice around the ring; invoice amt_paid == value == 1530 sat)"
+  },
+  "race_observation": "arming race (upstream issue #1) NOT reproduced in this run (n=1): propose ring armed both interceptors at 19.950/19.952Z, initiator fired 19.954Z, HTLCs intercepted 20.069/20.184Z — hop arming (at propose-accept) precedes payment dispatch by construction when the propose ring completes before execution.",
+  "verdict": "PASS — solver + propose/execute + interceptor fee waiver all proven on live signet LND; zero-cost rebalance of the induced 1530-sat rotational skew",
+  "raw_evidence": ["eddy-l1.log", "eddy-l2.log", "eddy-l3.log", "fwding-l1.json", "fwding-l2.json", "fwding-l3.json", "channels-l*.json", "getinfo-l*.json", "d2-l3-payments.json", "d2-l3-invoices.json", "d2-phase3.log", "d2-phase3.sh"]
+}

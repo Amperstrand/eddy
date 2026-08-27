@@ -6,6 +6,11 @@
 - [x] LND: endurance + random-traffic cycle rate (#3, #4)
 - [x] CLN: T1 zero-fee circulation PROVEN on regtest
   (`docs/reports/2026-08-23-eddy-cln-first-circulation.md`)
+- [x] D2: upstream LND ring on live signet — zero-fee circulation
+      PROVEN (run f0fdfb43); phantom-fee fwdinghistory artifact
+      captured; arming race NOT reproduced (n=1) —
+      `evidence/signet-20260825-lndring/`,
+      `docs/reports/2026-08-25-d2-signet-lnd-ring.md`
 
 ## Next
 - [ ] Signet: deploy eddy-cln to inr2 ring (hub/swap/clboss), first
@@ -27,5 +32,3 @@
       is the upgrade path
 - [ ] Mutinynet custommsg transport issue (unresolved — see
       docs/reports/mutinynet-custommsg-issue.md)
-- [ ] D2: LND race on signet (funding chain is slow; signet blocks
-      needed for LND wallet confirms)
