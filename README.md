@@ -2,6 +2,17 @@
 
 Free circular rebalancing with no central coordinator.
 
+## Research results (this fork)
+
+This is a fork of [wactario/eddy](https://github.com/wactario/eddy) carrying the research branch `eddy-cln`, which asked whether eddy's fee-free circular rebalancing survives contact with real CLN interceptor semantics — specifically, whether each hop can arm its HTLC interceptor in time to waive its fee. Across an instrumented 20-run corpus, the central finding is that the arming race is structural, not timing luck ([#1](https://github.com/Amperstrand/eddy/issues/1)): the initiator fires the payment ~1ms after the last hop accepts, leaving each hop only ~1–5ms to arm, and at these latencies the charged-hop outcome is deterministic. Because every fee-charging hop is one lost race, total fees scale linearly with cycle length ([#2](https://github.com/Amperstrand/eddy/issues/2)) — ≈15,000 msat on K4 (3 hops) vs 21,988 msat on ring5, a constant ≈5.5k msat (≈0.00014%) per hop on ~4M-sat circulations. The protocol itself holds up: convergence was proven at both sizes (skew 0.450 → 0.0003 on ring5, 0.267 → 0.0002 on K4) with zero on-chain deltas in every run ([#4](https://github.com/Amperstrand/eddy/issues/4)), and three consecutive skew→converge cycles on one ring showed zero degradation, an identical 21,988 msat fee total every cycle, and no state drift ([#3](https://github.com/Amperstrand/eddy/issues/3)). A ~20-line fix is designed but not implemented ([#5](https://github.com/Amperstrand/eddy/issues/5)): arm the interceptor before forwarding proposal-accept, or add an armed-ack traversal costing one extra ~21ms ring pass vs the 680ms settle — either makes the waiver deterministic. Still open: implementing that fix, and the observation that fixable cycle existence depends on the drain pattern (2 of 3 random-drain seeds produced one; ~50/50-balanced starting states leave fewer).
+
+| Finding | Evidence |
+|---|---|
+| The interceptor-arming race is structural: initiator fires ~1ms after last-hop accept, hops get ~1–5ms to arm, outcome deterministic at these latencies | [#1](https://github.com/Amperstrand/eddy/issues/1) |
+| Total fees scale linearly with cycle length; per-hop rate constant (≈5.5k msat ≈ 0.00014% per hop) | [#2](https://github.com/Amperstrand/eddy/issues/2) |
+| Endurance: 3 consecutive skew→converge cycles, zero degradation, fee total 21,988 msat identical every cycle | [#3](https://github.com/Amperstrand/eddy/issues/3) |
+| Convergence + wallet safety PROVEN (skew → ~0, zero on-chain deltas); random drain creates fixable cycles in 2/3 seeds | [#4](https://github.com/Amperstrand/eddy/issues/4) |
+| Fix design: ~20-line pre-arm on proposal-accept (or armed-ack traversal, +~21ms) — makes the fee waiver deterministic | [#5](https://github.com/Amperstrand/eddy/issues/5) |
 
 ## Overview
 
